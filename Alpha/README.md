@@ -10,6 +10,14 @@ This is:
 
 Perfect symmetries of Laegna projections.
 
+# Sources
+
+- [CoPilot on LaeLane](https://github.com/tambetvali/LaeLane/blob/main/LaegnaLane/LaegnaLaneAI-SC5N-new.md)
+- [Symmetry of Infinite Ball](https://github.com/tambetvali/Landscopes/blob/main/Landscapes/infinitecircle.md)
+- [Laegna-SpiReason Atlas by CoPilot](https://github.com/tambetvali/LaegnaSpireasonAtlasByCoPilot)
+- [Simply About Infinities 2](https://github.com/tambetvali/SimplyAboutInfinities#-simply-about-infinities--main-index)
+- [LaeArve: Theory of Infinities](https://github.com/tambetvali/LaeArve#theory-of-infinities) - main index with cover image.
+
 # Laegna Lane-based geometry
 
 Laegna geometry is geometric exension to Eucleidic and further spaces, by:
