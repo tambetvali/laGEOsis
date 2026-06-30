@@ -17,6 +17,7 @@ Perfect symmetries of Laegna projections.
 - [Laegna-SpiReason Atlas by CoPilot](https://github.com/tambetvali/LaegnaSpireasonAtlasByCoPilot)
 - [Simply About Infinities 2](https://github.com/tambetvali/SimplyAboutInfinities#-simply-about-infinities--main-index)
 - [LaeArve: Theory of Infinities](https://github.com/tambetvali/LaeArve#theory-of-infinities) - main index with cover image.
+- [Laegna Fantasy: Decimal-Laegna system](https://github.com/tambetvali/LaeGNAfantasy123) - do it at home, don't ask me: I made the Sheep Counters. It's a small task from times when I believed in communities.
 
 # Laegna Lane-based geometry
 
