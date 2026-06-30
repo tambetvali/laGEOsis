@@ -1,3 +1,15 @@
+***LaeGeosis repository***:
+- Laegna ***Geometry***.
+- Laegna ***Geography***.
+
+This is:
+- A *ball*.
+- A *circle*.
+- An *Earth*.
+- Infinite ***Universe***.
+
+Perfect symmetries of Laegna projections.
+
 # Laegna Lane-based geometry
 
 Laegna geometry is geometric exension to Eucleidic and further spaces, by:
