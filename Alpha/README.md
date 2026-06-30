@@ -215,3 +215,28 @@ While coordinates lose precision in middle, and there are Laegna systems which p
   - High bits locate your country, city for longer coordinate strings.
 
 Base-16 can be used with it's three-bit depth, and same geometries should be projected otherwise on it's diagonal.
+
+## Database linearization: External, mainteance step (System Administrators)
+
+Imagine you have perfect scale:
+- Power of loglin (2 half-octaves, 1 two-dimensional octave is 1/2 on X and Y, holographically) system is double power of it's linlinlinlin (4 half-octaves, 2 two-dimensional octaves are 1/4 on X and Y, holographically).
+
+Linears keep their linear properties in half and full octaves: and notice our calculations remain discrete, as we have ideal 1/2 octave symmetries: either linear (one-dimensional), 1, 2, 3, 4 octaves scale, or exponent (two-dimensional - quadratic in Laegna, is typically 3-dimensional or compressed 4-dimensional where first two remain in linear symmetry in both cases, counting 1, 2, then quadratic counts 4 and 16 while exponent counts 4 and 8, while linear counts beginning linearly - still 1, 2, but then continues with 3 and 4; base principle of laegna is that in digitwise-symmetries, where each digit is exactly located in number range space, linearity creates holofractal symmetry which projects the same digits to the same place, with different meanings).
+
+Now, let's say your digit length allows 16-precision and thus, is 2 digits of base-4, or 1 digit of base-16, or 4 digits in base-2, where all 3 laegna systems: laegna base-2, laegna base-4 and laegna base-16 are linearly compatible; laegna base-8 is exception - it's double-diagonally compatible with base-16, and logecs-linear because it counts in this order: I, O, A, E, I?, O?, A?, E? - logecs compares by highest digit, because lesser digits do not count as logical value changes unless higher bits are equal - if higher bits are equal, difference or point acceleration is between 1-4, while if higher bits differ, *only* their value counts as 5-8; 0 and 9 are half-scales 1 to 4 (logecs logic/math limit 0 or guess between {1, 2, 3, 4}, where each has 25% probability, or logex automation zoom or scale to Z) and 5 to 8 (either guess between the higher band range, knowing only upmost third bit, or it's maximum 9 - like limit value of 8(8) repeated infinitely in single digit).
+
+Here:
+- You keep four-digit loglin coordinate:
+  - AAEE
+- You need eight-digit database hash for this coordinate:
+  - AAIOOIEE
+  - Now you know linear, continuous coordinate.
+
+User works with coordinates on rectangular, local distribution, or importance-most items of projectionally low-density fractal head, which removes repeated or low-scale topologies.
+
+Database manager works with *two times longer digit length* coordinates, which kind of have additional digits in the middle to connect the higher and lower fractals properly.
+
+## Signed ranges
+
+Laegna signed range:
+- If sign is given by "O" and "A", they can mean inner "rhomb-like" square as "A" (North, plus pole) and outer quadrets of a rhomb, one in each of four diagonal directions, *outwards* reconstruct the rhomb and show what hilber could mean: by extending this 14 to 14-48 (18), where 14 is slice 0:4, 48 is slice 4:8, and 18 is slice 0:8, where each number covers it's block from last number's end, to it's own end, and because it fractally repeats it's digit - it's ideal position on global (macroscale) and ultralocal (microscale) coordinates is equal to it's local coordinates - for example, evolving locally, it's doing equal infinitesimal-wise evolution in regards to infinity to say their binary paradox is really resolved and they are using Laegna Logecs or equivalent display of coordinates: to see when you progress, as Lenin would say, is to do your progress: paraphrasing "to Learn, to Learn, to Learn", which was somehow a sentence I could remember, especially because of the Estonian who cited it and was important back that time altough not fan of Lenin, but \*less fan of Stalin\*, because this left wing menthality hardly kills: Lenin is less known by murders and more by a small number of positive and negative sentences like this.
