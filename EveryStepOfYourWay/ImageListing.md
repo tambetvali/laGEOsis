@@ -6,7 +6,7 @@ I prepared CoPilot for the task to create this gallery with me:
 >
 > Here we are going to illustrate one image gallery: rather science than art.
 
-![Cover][Cover.png]
+![Cover](Cover.png)
 
 Every task and result description will be given here, along with filename: file will be uploaded along.
 
