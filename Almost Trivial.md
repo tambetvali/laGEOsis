@@ -281,3 +281,157 @@ If you want to go one step more concrete next time, we can:
 - and mark exactly which cells are “interlace points” (where they match or mirror),  
 
 then you’ll see your Laegna interlacing pattern as an actual discrete picture.
+
+---
+
+Well, based on mostly that, I gave CoPilot some more details of mapping quality:
+
+Yes on square:
+- In each four directions, we unfold at linear speed and this is representable as taking exact averages recursively in each direction; from equator, we fold at linear speed.
+- On ball, the averages equally divide distances.
+- The 1/4 dimension precisely cuts laegna base-2 type of positions: it cuts the whole distance into 1/2 at equator, then it cuts both sides to 1/2 etc etc. From two directions from equator: what happens, is equivalent to 1's position between 0 and 2 in 1st infinity octave, or 0 and infinity in second: precision bands switch their positions, which is linear to one direction, is exponential in other, and what is exponent in other, is linear in one. Thus, we need double-unit ball, where unit is not it's radius, but 1/4 of it's diameter => equals 1. Half-way from north pole to south pole, passed distance must equal 1. Or, they equal 2 - then, 4 is projected like infinity and 2+2=2*2 symmetry is used to be sure that on this grid, lin and exp coordinates meet if both are drawn between 0, 2 and 4 to allow all divisions: we find squares to fill our chessfield.
+
+---
+
+# Laegna Interlacing — First Usable Mapping  
+### (GitHub‑flavored Markdown with inline KaTeX)
+
+This note captures the **first practical Laegna coordinate rule** we can use for visualization.  
+It is not the final theory — just the first mapping that can be implemented.
+
+---
+
+## 1. Double‑Unit Ball
+
+Laegna uses a *double‑unit ball*:
+
+- The **unit** is not the radius.  
+- The unit is **one quarter of the diameter**.
+
+So the full diameter is:
+
+- from south pole to north pole  
+- measured as  
+  $4$ units.
+
+We define a vertical coordinate:
+
+- $v \in [0,4]$  
+  - $v = 0$ → south pole  
+  - $v = 2$ → equator  
+  - $v = 4$ → north pole
+
+This is the axis where **linear unfolding** and **exponential folding** meet.
+
+---
+
+## 2. Linear vs Exponential Coordinates
+
+Each triangle (or square cell) receives **two coordinates**:
+
+### Linear band (local)
+This is simply:
+
+- $T_{\text{lin}} = v$
+
+It grows at constant speed from south to north.
+
+### Exponential band (global)
+This grows fast from south to equator,  
+then collapses symmetrically from equator to north:
+
+- For $v \in [0,2]$:  
+  $R_{\text{exp}} = 2v$
+
+- For $v \in [2,4]$:  
+  $R_{\text{exp}} = 8 - 2v$
+
+This expresses the Laegna rule:
+
+> What is linear in one direction is exponential in the other,  
+> and the flip happens at the equator.
+
+---
+
+## 3. The $1/4$ Dimension
+
+The $1/4$ dimension is the Laegna base‑2 cut:
+
+- First cut: $0 \rightarrow 2 \rightarrow 4$  
+- Second cut: $0 \rightarrow 1 \rightarrow 2$ and $2 \rightarrow 3 \rightarrow 4$
+
+This mirrors:
+
+- " $1$ between $0$ and $2$ " in the first octave  
+- " $0$ between $0$ and $\infty$ " in the second octave
+
+Precision bands switch roles:
+
+- linear becomes exponential  
+- exponential becomes linear
+
+This is why the equator ($v=2$) is the **flip point**.
+
+---
+
+## 4. Interlace Anchors
+
+Interlacing happens where:
+
+- $T_{\text{lin}}$ and $R_{\text{exp}}$  
+- fall into the same Laegna band  
+- or mirror each other across the equator.
+
+We check:
+
+- $T_{\text{lin}} = R_{\text{exp}}$  
+- or both in $\{0,2,4\}$  
+- or symmetric under the equator flip.
+
+These are the **true Laegna points**.
+
+Everything else is scaffolding.
+
+---
+
+## 5. How This Drives Visualization
+
+For each triangle on the sphere:
+
+1. Compute its average vertical position $v$.
+2. Assign:
+   - $T_{\text{lin}} = v$
+   - $R_{\text{exp}}$ using the piecewise rule.
+3. Highlight triangles where linear and exponent coordinates **meet or mirror**.
+
+For each cell on the chessfield:
+
+1. Assign $(X_{\text{lin}}, Y_{\text{exp}})$ using the same $0\!-\!2\!-\!4$ structure.
+2. Highlight cells where $X_{\text{lin}}$ and $Y_{\text{exp}}$ **agree**.
+
+This gives us a **first Laegna‑consistent interlacing rule** we can implement.
+
+---
+
+## 6. Summary of the Mapping
+
+- Vertical coordinate:  
+  $v \in [0,4]$
+
+- Linear band:  
+  $T_{\text{lin}} = v$
+
+- Exponential band:  
+  $R_{\text{exp}} = 2v$ for $v \le 2$  
+  $R_{\text{exp}} = 8 - 2v$ for $v \ge 2$
+
+- Interlace anchors:  
+  $T_{\text{lin}} = R_{\text{exp}}$  
+  or both in $\{0,2,4\}$  
+  or symmetric under equator flip.
+
+This is the first usable Laegna coordinate system for visualization.
+
+---
+
+This file is ready - it had to be "first usable" for computational mapping of laGEOsis and shpere-Lane geometries.
