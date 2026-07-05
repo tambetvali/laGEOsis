@@ -812,7 +812,7 @@ This article contains the **second two topics** originally planned:
 1. Category‑theoretic interpretation of Laegna coordinates  
 2. Computational specification of the Laegna system  
 
-All nested code blocks begin with `\``` as required.
+All nested code blocks begin with ```` as required.
 
 ---
 
@@ -880,9 +880,9 @@ Two functors define the geometry:
 
 ### Functor 1 — Sphere → Disc Projection
 
-\```
+```
 F : \text{Sphere} \to \text{Disc}
-\```
+```
 
 This functor maps:
 - sphere vertices → disc coordinates,
@@ -897,9 +897,9 @@ It preserves:
 
 ### Functor 2 — Bands → Octaves
 
-\```
+```
 G : \text{Bands} \to \text{Octaves}
-\```
+```
 
 This functor maps:
 - linear bands → exponent bands,
@@ -916,9 +916,9 @@ It preserves:
 
 The **interlace transformation** is a natural transformation:
 
-\```
+```
 η : F ⇒ G
-\```
+```
 
 It ensures that:
 - geometric projection (Sphere → Disc)
@@ -942,7 +942,7 @@ All nested code blocks are escaped.
 
 A Laegna coordinate is encoded as:
 
-\```
+```
 {
   "v": float,            // double-unit coordinate
   "T_lin": float,        // linear band
@@ -951,7 +951,7 @@ A Laegna coordinate is encoded as:
   "band_exp": int,       // floor(log2(abs(R_exp)))
   "interlace": bool      // band_lin == band_exp or special negative-octave case
 }
-\```
+```
 
 This structure is the primitive for:
 - rendering,
@@ -966,10 +966,10 @@ This structure is the primitive for:
 
 Projection uses a stereographic‑like mapping:
 
-\```
+```
 u = x / (1 + z)
 w = y / (1 + z)
-\```
+```
 
 This preserves:
 - hemisphere ordering,
@@ -980,9 +980,9 @@ This preserves:
 
 ## 2.3. Linear Band Computation
 
-\```
+```
 T_lin = (z + 1) * 2
-\```
+```
 
 This maps:
 - south pole → 0  
@@ -993,11 +993,11 @@ This maps:
 
 ## 2.4. Exponent Band Computation (Octaves)
 
-\```
+```
 k = floor(T_lin)
 p = T_lin - k
 R_exp = 2**k * p
-\```
+```
 
 This creates octave bands:
 - $2^0$, $2^1$, $2^2$, $2^3$
@@ -1006,12 +1006,12 @@ This creates octave bands:
 
 ## 2.5. Negative Octave Handling
 
-\```
+```
 if abs(z) < 0.2:
     k = -1
     p = T_lin / 4
     R_exp = 2**k * p
-\```
+```
 
 This models:
 - “ball smaller than zero”,
@@ -1021,11 +1021,11 @@ This models:
 
 ## 2.6. Interlace Detection
 
-\```
+```
 k_lin = floor(T_lin)
 k_exp = floor(log2(abs(R_exp)) + 1e-6)
 interlace = (k_lin == k_exp) or (k_lin == 0 and k_exp == -1)
-\```
+```
 
 Interlace points are:
 - symmetry anchors,
@@ -1050,3 +1050,667 @@ This coordinate system is a primitive for:
 ---
 
 # END OF ARTICLE
+
+# ARTICLE E — Laegna Infinity Structures  
+Tambet Väli — Laegna Logecs / Laegna Mathematecs
+
+Laegna infinity is not a number.  
+It is an **octave‑band phenomenon**: infinity emerges when exponent bands outgrow linear bands, or when collapse bands invert exponent growth.
+
+Infinity in Laegna is therefore **band‑infinite**, not numerically infinite.
+
+---
+
+## 1. Infinity as Octave Divergence
+
+Infinity occurs when:
+
+```
+|R_exp| >> |T_lin|
+```
+
+This is **octave divergence**.
+
+It means:
+
+- exponent band grows faster than linear band,
+- geometry becomes octave‑dominant,
+- collapse and interlace become negligible.
+
+Infinity is therefore a **band imbalance**, not a magnitude.
+
+---
+
+## 2. Infinity Bands
+
+Infinity bands are defined by:
+
+```
+k_exp - k_lin ≥ N
+```
+
+for some threshold $N$.
+
+This creates:
+
+- **soft infinity** — small divergence  
+- **medium infinity** — octave dominance  
+- **hard infinity** — collapse‑immune divergence  
+
+Infinity is graded, not absolute.
+
+---
+
+## 3. Negative Infinity (Collapse Infinity)
+
+Negative infinity occurs when:
+
+```
+k_exp = -1
+k_lin >> 0
+```
+
+This is **collapse infinity**:
+
+- geometry collapses into square symmetry,
+- exponent band shrinks,
+- linear band dominates.
+
+Negative infinity is the mirror of positive infinity.
+
+---
+
+## 4. Infinity Interlace
+
+Infinity interlace occurs when:
+
+```
+k_lin = k_exp
+```
+
+even if both are large.
+
+This creates:
+
+- stable infinite structures,
+- symmetric infinite bands,
+- projection‑stable infinity.
+
+Infinity interlace is the **fixed‑point infinity**.
+
+---
+
+## 5. Infinity Applications
+
+Laegna infinity structures allow:
+
+- multi‑octave infinite geometry,
+- infinite logical values,
+- infinite collapse sequences,
+- infinite projection chains,
+- infinite symmetry bands.
+
+Infinity becomes **structural**, not numerical.
+
+---
+
+# ARTICLE F — Laegna Dimensional Collapse Theory  
+Tambet Väli — Laegna Logecs / Laegna Mathematecs
+
+Dimensional collapse is the process where higher‑dimensional Laegna structures fold into lower‑dimensional ones under band alignment.
+
+Collapse is not destruction — it is **band reduction**.
+
+---
+
+## 1. Collapse Trigger
+
+Collapse occurs when:
+
+```
+abs(z) < δ
+```
+
+This places the point into the **negative octave band**:
+
+```
+k = -1
+R_exp = 2**(-1) * p
+```
+
+Collapse is triggered by geometric centrality.
+
+---
+
+## 2. Collapse Mapping
+
+Collapse mapping:
+
+```
+(T_lin, R_exp) → (T_lin, 2**(-1) * p)
+```
+
+This reduces exponent band by one octave.
+
+Collapse is:
+
+- symmetric,
+- reversible,
+- band‑preserving.
+
+---
+
+## 3. Dimensional Collapse Levels
+
+### Level 1 — Triangle → Square Collapse  
+When exponent band shrinks, triangles behave like square wedges.
+
+### Level 2 — Square → Disc Collapse  
+Square centers align under disc projection.
+
+### Level 3 — Disc → Line Collapse  
+Disc radii collapse into band indices.
+
+### Level 4 — Line → Point Collapse  
+Band indices collapse into interlace anchors.
+
+Collapse is a **multi‑stage dimensional reduction**.
+
+---
+
+## 4. Collapse Algebra
+
+Collapse operator:
+
+```
+C(v) = -1 if abs(z) < δ else floor(v)
+```
+
+Collapse mapping:
+
+```
+R_exp' = 2**C(v) * p
+```
+
+Collapse composition:
+
+```
+C ∘ C = C
+```
+
+Collapse is **idempotent**.
+
+---
+
+## 5. Collapse Applications
+
+Dimensional collapse enables:
+
+- projection‑stable geometry,
+- multi‑octave compression,
+- symmetry preservation under reduction,
+- logical collapse (I/O/A/E),
+- geometric simplification.
+
+Collapse is a primitive for **dimensional logic**.
+
+---
+
+# ARTICLE G — Laegna Projection Algebra  
+Tambet Väli — Laegna Logecs / Laegna Mathematecs
+
+Projection algebra defines how Laegna structures map between:
+
+- sphere,
+- disc,
+- squarefield,
+- lane geometry.
+
+Projection is not Euclidean — it is **band‑aware**.
+
+---
+
+## 1. Sphere → Disc Projection
+
+Projection uses:
+
+```
+u = x / (1 + z)
+w = y / (1 + z)
+```
+
+This preserves:
+
+- hemisphere ordering,
+- equator symmetry,
+- negative octave collapse.
+
+Sphere → disc is a **band‑preserving projection**.
+
+---
+
+## 2. Disc → Squarefield Projection
+
+Square centers are placed at:
+
+```
+(cx, cy) = (u * R0 + cx0, w * R0 + cy0)
+```
+
+Square radius:
+
+```
+r = R0 * 0.08
+```
+
+This preserves:
+
+- adjacency,
+- band ordering,
+- collapse symmetry.
+
+---
+
+## 3. Squarefield → Lane Projection
+
+Lane projection maps:
+
+```
+(cx, cy) → (lane_index, lane_offset)
+```
+
+Lane index is determined by band:
+
+```
+lane_index = floor(T_lin)
+```
+
+Lane offset is determined by exponent:
+
+```
+lane_offset = R_exp
+```
+
+This creates **band‑aligned lanes**.
+
+---
+
+## 4. Projection Composition
+
+Projection algebra defines:
+
+```
+Sphere → Disc → Squarefield → Lane
+```
+
+Composition is:
+
+```
+P = L ∘ S ∘ D
+```
+
+Projection is:
+
+- associative,
+- band‑stable,
+- collapse‑aware.
+
+---
+
+## 5. Projection Interlace
+
+Projection interlace occurs when:
+
+```
+k_lin = k_exp
+```
+
+This ensures:
+
+- stable projection,
+- symmetry preservation,
+- collapse resistance.
+
+Interlace is the **projection fixed point**.
+
+---
+
+## 6. Projection Applications
+
+Projection algebra enables:
+
+- multi‑octave rendering,
+- band‑aware visualization,
+- collapse‑stable geometry,
+- lane‑based coordinate systems,
+- multi‑truth logic visualization.
+
+Projection is a primitive for **Laegna geometric computation**.
+
+---
+
+# END OF ARTICLES E, F, AND G
+
+# ARTICLE H — Laegna Temporal Bands  
+Tambet Väli — Laegna Logecs / Laegna Mathematecs
+
+Laegna temporal bands describe how time behaves under octave geometry.  
+Time is not linear — it is **banded**, **octave‑scaled**, and **collapse‑aware**.
+
+Temporal bands allow Laegna systems to represent:
+
+- multi‑octave time,
+- reversible time,
+- collapse time,
+- interlace time.
+
+---
+
+## 1. Temporal Coordinate
+
+A temporal coordinate is:
+
+```
+T_time = (t + 1) * 2
+```
+
+This mirrors the double‑unit ball:
+
+- past → 0  
+- present → 2  
+- future → 4  
+
+Time becomes a **double‑unit axis**.
+
+---
+
+## 2. Temporal Octaves
+
+Define:
+
+```
+k_time = floor(T_time)
+p_time = T_time - k_time
+R_time = 2**k_time * p_time
+```
+
+This creates temporal octaves:
+
+- octave‑0: immediate time  
+- octave‑1: short‑range time  
+- octave‑2: long‑range time  
+- octave‑3: deep time  
+
+Temporal octaves allow multi‑scale temporal reasoning.
+
+---
+
+## 3. Negative Temporal Octave
+
+Collapse time occurs when:
+
+```
+abs(t) < δ
+```
+
+Then:
+
+```
+k_time = -1
+p_time = T_time / 4
+R_time = 2**(-1) * p_time
+```
+
+This models:
+
+- temporal collapse,
+- “time smaller than zero”,
+- square‑like temporal symmetry.
+
+---
+
+## 4. Temporal Interlace
+
+Temporal interlace occurs when:
+
+```
+k_time = k_exp
+```
+
+This aligns:
+
+- temporal band,
+- exponent band.
+
+Temporal interlace is the fixed point of Laegna time.
+
+---
+
+## 5. Temporal Applications
+
+Temporal bands enable:
+
+- multi‑octave scheduling,
+- temporal collapse detection,
+- reversible temporal logic,
+- octave‑scaled simulations,
+- Laegna temporal reasoning.
+
+---
+
+# ARTICLE I — Laegna Multi‑Truth Calculus  
+Tambet Väli — Laegna Logecs / Laegna Mathematecs
+
+Laegna multi‑truth calculus extends the I/O/A/E truth values into a full computational system.
+
+Truth values are not Boolean — they are **octave‑band logical states**.
+
+---
+
+## 1. Truth‑Value Coordinates
+
+Truth values correspond to band pairs:
+
+```
+I ↔ (k_lin = 0, k_exp = -1)
+O ↔ (k_lin = 0, k_exp = 0)
+A ↔ (k_lin = 1, k_exp = 1)
+E ↔ (k_lin = 2, k_exp = 2)
+```
+
+Truth is geometric.
+
+---
+
+## 2. Multi‑Truth Operations
+
+### Conjunction (meet)
+
+```
+I ∧ X = I
+O ∧ X = O
+A ∧ X = min_band(A, X)
+E ∧ X = min_band(E, X)
+```
+
+### Disjunction (join)
+
+```
+I ∨ X = X
+O ∨ X = max_band(O, X)
+A ∨ X = max_band(A, X)
+E ∨ X = E
+```
+
+### Negation (reflection)
+
+```
+¬I = E
+¬O = A
+¬A = O
+¬E = I
+```
+
+Negation is octave reflection.
+
+---
+
+## 3. Multi‑Truth Derivatives
+
+Define truth‑band derivative:
+
+```
+dX = k_exp - k_lin
+```
+
+This measures:
+
+- truth imbalance,
+- truth divergence,
+- truth collapse.
+
+---
+
+## 4. Multi‑Truth Integrals
+
+Truth integral:
+
+```
+∫ X = sum_over_bands(X)
+```
+
+This accumulates truth across octaves.
+
+---
+
+## 5. Multi‑Truth Applications
+
+Multi‑truth calculus enables:
+
+- octave‑logic inference,
+- collapse‑aware reasoning,
+- multi‑truth computation,
+- geometric logic engines,
+- Laegna Logecs.
+
+---
+
+# ARTICLE J — Laegna Spatial Logic (Lane Algebra)  
+Tambet Väli — Laegna Logecs / Laegna Mathematecs
+
+Lane algebra describes how Laegna coordinates behave in lane‑structured space.
+
+A lane is a **band‑aligned spatial unit**.
+
+---
+
+## 1. Lane Coordinates
+
+Lane index:
+
+```
+lane_index = floor(T_lin)
+```
+
+Lane offset:
+
+```
+lane_offset = R_exp
+```
+
+Lane coordinate:
+
+```
+L = (lane_index, lane_offset)
+```
+
+---
+
+## 2. Lane Operations
+
+### Lane Addition
+
+```
+L + L' = (lane_index + lane_index', lane_offset + lane_offset')
+```
+
+### Lane Scaling
+
+```
+a * L = (a * lane_index, a * lane_offset)
+```
+
+### Lane Reflection
+
+```
+L* = (-lane_index, lane_offset)
+```
+
+Lane reflection mirrors band index.
+
+---
+
+## 3. Lane Collapse
+
+Lane collapse occurs when:
+
+```
+abs(z) < δ
+```
+
+Then:
+
+```
+lane_index = -1
+lane_offset = R_exp / 2
+```
+
+Lane collapse is negative octave collapse in spatial form.
+
+---
+
+## 4. Lane Interlace
+
+Lane interlace occurs when:
+
+```
+k_lin = k_exp
+```
+
+This creates:
+
+- stable lanes,
+- symmetric lanes,
+- collapse‑resistant lanes.
+
+Lane interlace is the spatial fixed point.
+
+---
+
+## 5. Lane Projection
+
+Lane projection is:
+
+```
+(cx, cy) → (lane_index, lane_offset)
+```
+
+This maps squarefield geometry into lane geometry.
+
+Lane projection is band‑aware and collapse‑aware.
+
+---
+
+## 6. Lane Applications
+
+Lane algebra enables:
+
+- spatial logic,
+- band‑aware geometry,
+- lane‑based coordinate systems,
+- multi‑octave spatial reasoning,
+- Laegna geometric computation.
+
+---
+
+# END OF ARTICLES H, I, AND J
