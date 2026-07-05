@@ -229,9 +229,9 @@ Think of drawing the ball on a screen:
    - linear coordinate (local band) and exponent coordinate (global band) are equal or symmetric:  
      
 
-\[
-     X = Y,\quad \text{or “R and T match at this digit”.}
-     \]
+$$
+X = Y,\quad \text{or “R and T match at this digit”.}
+$$
 
 
    - those are your **interlace anchors**: places where the ball’s curvature and the lane’s exponent agree.
