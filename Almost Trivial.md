@@ -277,7 +277,7 @@ That’s why you can:
 If you want to go one step more concrete next time, we can:
 
 - take a 4×4 grid,  
-- assign each cell a pair \((X_{\text{lin}}, Y_{\text{exp}})\),  
+- assign each cell a pair $(X_{\text{lin}}, Y_{\text{exp}})$,  
 - and mark exactly which cells are “interlace points” (where they match or mirror),  
 
 then you’ll see your Laegna interlacing pattern as an actual discrete picture.
