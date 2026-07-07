@@ -151,3 +151,5 @@ This interpolate logic leads to this:
         - We can see: not being at least a basic combinator straight eliminates all physic system to impossible state, and thus *physical system was forced to implement this before a single moment*.
           - Quantum supersets and other things do this actually: basic math combinator is implemented for energy maximization gain, not because one would want this kind of system, but because it's practical - space shape, from impossibility, transformed to possible interactions before it was born, apparent as physics;
             - we could try whether space is all the time failing some attempts to "different directions", trying to not be physics but ending up as one: if such constant evolution would be in physical machine, perhaps we could still measure only the final, possible interactions because the others, just become some kind of effects and their effects would be removed fast.
+
+Pure Lane is what contains exponent and linear as 2 dimensions of single linear ray.
