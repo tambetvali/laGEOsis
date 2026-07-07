@@ -1,5 +1,5 @@
 LaeGeosis simulation:
-- https://3154725f-d035-4ae0-9dde-388203d01c85-00-y4ounjuawzha.riker.replit.dev/
+- [Replit Simulation](https://grid-sphere-logic--tambetvali.replit.app)
 
 On this simulation you could see, how the squares which become round would be positioned, and how many are there with a few first R values such as 0, 0.5, 1 and 2 - yet this is signed system, because Laegna range either shows one or other side of the grid; yet it gives the understanding of how coordinates are structured.
 
