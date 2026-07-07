@@ -158,6 +158,26 @@ Pure Lane is what contains exponent and linear as 2 dimensions of single linear 
 
 ---
 
+Later added:
+
+Notice that one needs to make their system linear - let's assume you only want whole points:
+- Set points where lin and exp coordinates both pass at the same point: these *exist*, other points could be *fragments*, but this is linear existence in terms of discrete systems, laegna "integer" orders.
+- You can create fractal of the number:
+  - It's repeated into itself several times.
+  - Marked points are still diagonal coordinates (where all members are equal): all three levels of fractal are at same position.
+  - Yet, the dimensionality can be growth through "fisheye" effect: pixel size and dimensionality grows through every branch of the fractal, and something fractal-like appears.
+    - For example, base-16 digit gives 2-branched fractals as pixels, and both branches (inner dimensions - internal and external) give lower and higher channel / band / frequency, which divides each octave into two.
+      - By bringing curved spaces, one can approximate this as they wish.
+      - Several "spheres", internal dimensions of hologram fractal - this multi-D image is projected to screen.
+        - Now, one can for example take *symmetries of all numbers*, and virtual points where they check if certain relations are passed.
+        - Distances are calculated between all pairs of points, which means matrix multiplies this whole pixel space into it's exponent, also by resource need - it's like DL AI perceptron layer now by it's math structure, and we also have virtual knowledge of all dimensionality even if we convert this to flat, it's symmetric and remains so:
+          - The way in both ways goes through R values, digit lengths of Laegna, in base-4, for example 5 needs R=1 for 1, 2, 3, 4, and R=2 for 5, so R1 and R2 coordinates are calculated: when R1 coordinate is reached, next coordinate starts to approach the end blending to R2 value at the end. This square-efficiency reprojection can linearize intermediate space complexity by averages of where points are passed: for simple spatial objects, which we necessarily measure on plain 2D space in terms of fragments, the quadration is also equivalent to how we put map pieces together, using the local position where perceivable and effective curvature infinitesimal are on horizon of view, and we can mathematically model our "unit space": Z is the smallest we can see, a field; X is what we measure locally, around our size as unit such as ball in center with our volume, and finally the surrounding, ac ball of things we theoretically perceive in standard vision on locally infinite ball.
+  - The "externality" 360, in all symmetries, achieves it's peak Hilbert's external space coordinates at point, but we convert it to square: externality is relative to square.
+  - The "local" and "global" break exactly at middle, normal for 4 positional letters, our square is broken to north and south halves by drawing line segments connecting all sequential edge centers, and the exterior compresses as if the four corners contract to "middle outside", which measured in next octave connects it's lowest infinitesimal starting from equator to opposite center of circle, so it starts from second point already exponent, next pixel after half of even number unit center of it's longitude line, but then the precision grows from this number to center, E from each side, where the opposite pole center is I, and A and O are left and right side - by changing dimensionality or making it smaller than infinitesimal from upwards-symmetric exponent proportional, which might be more convenient in Laegna Math (and in Logecs, rather trivial because we really go there and measure).
+  - Multidimensional ball can be seeked for these interlace properties - and images we already put on maps and textures, we can yet make them in normal 2D to make sure they actually *topologically project there* from actual ball, which is multivariable optimization of our scales, but seeks down to trivial in Laegna Math: basic, 1st order calculus or even logic / that's why I call it Logecs - not to confuse whether it's logic or math, but it seeks some kind of "True", a "Position", out of four, and tries to avoid extremes or negativity.
+
+---
+
 CoPilot:
 
 **Concise takeaway:**  
