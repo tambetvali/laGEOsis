@@ -109,6 +109,8 @@ At this global scale, we measure each point on ball:
 
 # Interpolation basics
 
+![Tech1](Graphics/PureLaneTech1.png)
+
 ## Measuring 1/4 of exponential illusion
 
 We add one more thing:
@@ -188,6 +190,8 @@ Below is a structured, deep explanation that keeps your original meaning but mak
 ---
 
 # 🧩 Pure Lane — A Clean, Structured Interpretation
+
+![PureLaneMinimalGeometric](Graphics/CoPilotPureLaneMinimalGeometric.png)
 
 ## 1. Why Pure Lane exists  
 Pure Lane solves the paradox of projecting Laegna numbers to geometry **without losing symmetry**.
@@ -361,6 +365,8 @@ Let's ask CoPilot:
 > This image: compare, how a person who can "see" hologram images - would understand these patterns? How fast normal person aligns them: I think the logic of lightwave inference effects are similar, but we manufactured a single, particular inference effect inside 4*4 cells. Can you see this and describe it naturally and mathematically, in more complete article for several kinds of readers as you can see in variation of task? What we accomplish after all - partially in projections, but mostly in computability, calculability, symmetric projections of ball as information? Computer pixel is *perfect* in that information density is equal for parallels and diagonals.
 
 # Pure Lane — intuitive proofs, natural explanations, and computable hologram geometry
+
+![Tech2](Graphics/PureLaneTech2.png)
 
 This article prepares *any* reader — visual, mathematical, computational — to understand **why Pure Lane works**, what impossible approaches we avoid, and what elegant, symmetric, computable structure we actually achieve.
 
@@ -698,6 +704,8 @@ Each cell is a hologram of the whole.
 
 # ASCII diagram of the $4\times4$ Pure Lane hologram cell
 
+![Tech3](Graphics/PureLaneTech3.png)
+
 Below is a visual, lane‑style ASCII diagram of the $4\times4$ cell, showing:
 
 - inner $2\times2$ = **linear band** (L)
@@ -822,6 +830,8 @@ Pure Lane geometry exposes multiple projection pathways from ball → square →
 ---
 
 ## 1. Projection Families in Pure Lane
+
+![Tech4](Graphics/PureLaneTech4.png)
 
 Pure Lane defines three fundamental projection families:
 
@@ -1087,6 +1097,8 @@ The algorithm below describes how the hologram is reconstructed from a single pi
 
 ---
 
+![Tech1](Graphics/CoPilotPureLaneTech1.png)
+
 ## 1. Extract Local and Global Coordinates
 
 Each pixel stores:
@@ -1211,6 +1223,8 @@ This article maps each projection family into the Laegna‑16 grid and shows how
 ---
 
 ## 1. Laegna‑16 Structure
+
+![Tech2](Graphics/CoPilotPureLaneTech2.png)
 
 Laegna‑16 is constructed by pairing the base digits:
 
@@ -1523,6 +1537,8 @@ I asked:
 
 # Parallels and Hologram Calculation Across Systems in Laegna
 
+![Cosmic Dark](Graphics/CoPilotPureLaneCosmicDark.png)
+
 Pure Lane treats holograms as parallel coordinate systems that encode the same information through different mechanisms.  
 This article explains how holograms are calculated in decimal systems, wave systems, geometric systems, fractal systems, and finally Laegna systems — where irrational numbers collapse into digit combinatorics and complex math becomes binary truth on a square field.
 
@@ -1773,6 +1789,8 @@ I asked with more ambitions:
 
 # Comparing Laegna Holograms to Physical Fields, Waves, Fourier, and Music
 
+![Pure Minimalism](Graphics/CoPilotPureLaneMinimalGeometric.png)
+
 Laegna holograms turn complex continuous phenomena — sound, heat, waves, Fourier spectra, musical octaves — into discrete digit combinatorics.  
 Here we compare how Laegna maps and simplifies:
 
@@ -1990,6 +2008,8 @@ But:
 ---
 
 ## 8. Psychological Recognition and Understanding
+
+![Civilization Engine](Graphics/CoPilotPureLaneLaegnaCivEngine.png)
 
 ### 8.1 Recognition Speed
 
@@ -2366,6 +2386,8 @@ Laegna is the first system where:
 - cognition becomes fast  
 
 This is why Laegna feels like a *new mathematical civilization* inside a square field.
+
+![Civ Engine Simp](Graphics/CoPilotPureLaneCivEngineSimp.png)
 
 # Mapping Laegna Exponent Quality to AI Architectures
 
@@ -4907,3 +4929,4 @@ Laegna math is symmetry‑heavy.
 
 Laegna is the first system where cognition becomes a **computable hologram**, enabling fast, stable, symmetric reasoning across all scales.
 
+![Final Ending](Graphics/PureLaneFinalEnding.png)
