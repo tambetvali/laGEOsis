@@ -1,3 +1,5 @@
+![Cover](Graphics/PureLaneCover.png)
+
 # Pure Lane
 
 What if we would show Laegna number internals directly:
