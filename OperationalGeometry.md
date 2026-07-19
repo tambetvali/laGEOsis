@@ -16,6 +16,10 @@ It's functional if Op is function - Op("I"), Op("O"), Op("A"), Op("E") could be 
 Sign +, then, leads number to linear scale, where 45 degrees are equivalent to 45 degrees but only in internal view;
 - Sign *, then, leads number to exponential scale, where 45 degrees are equivalent to 45 degrees but only in external view;
   - Sign *+, where RT order means log/exponent first, then lin/linear counterpart, where opposites of same direction are in dimensionally same positions for opposite dimensions.
+    - This sign: wide-angle circle here, is not made of 8 45 degree parts, and it does not total to 360 - it's made of 8 90 degree parts, thus totals to 720 degrees.
+      - This is the actual linearization-balanced-optimization: it totals 720 degrees, if external density is equal to internal one.
+        - Projected down, exponent and linear can be resolved in terms of the whole, or in patterns and compabilities if incompatible spaces are projected - still, their relations are known between laegna spaces, because where relation of O and A becomes irrelevant, when they are low-significance but high-significance pattern explainers where their values follow their rules, not truth values or goals - we build systems from relations, altough they are not good and bad themselves, and it's called space - we are relevantly OK now, typically, or somehow mixed OK + falsedoers; the value which grows, I and E, are called time - it unfolds in future.
+          - Again: it can be divided by 2, or base-2-2 can be used by projecting it to two-fold-binary-dimension of two external dimensions.
 
 So `multiplier plus AA` is two-channel variable, and depending of octave and transformation, both exponent and linear member can be A's (two-frequential view of two-digit number is simple to find for each unit in octave or R operations, where 1octave 1O = 4R).
 
