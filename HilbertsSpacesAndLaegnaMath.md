@@ -1,3 +1,5 @@
+This series of articles is written by CoPilot, on connecting Hilbert-Laegna math (more precisely expressed already in the series themselves, by CoPilot itself):
+
 # Introductory Article — Why Dual‑Realm Mathematics Matters  
 ## A Gentle Invitation to LaGEOsis, Hilbert Space, and Their Shared Geometry
 
