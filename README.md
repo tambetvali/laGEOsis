@@ -1,3 +1,5 @@
+![TitleExponentialBall](GRAPHICS/TitleExponentialBall.png)
+
 LaeGeosis simulation:
 - [Replit Simulation](https://grid-sphere-logic--tambetvali.replit.app)
 
