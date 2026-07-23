@@ -1,4 +1,10 @@
+A little bit lost quality, but good presentation:
+
+<br>
+
 ![TitleExponentialBall](GRAPHICS/TitleExponentialBall.png)
+
+<br>
 
 LaeGeosis simulation:
 - [Replit Simulation](https://grid-sphere-logic--tambetvali.replit.app)
